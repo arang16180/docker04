@@ -1,0 +1,23 @@
+FROM node:15-slim
+
+
+WORKDIR /app
+
+# Step 3.1 - Add working directory
+
+# Step 3.2 - Copy npm dependencies
+
+# Step 3.3 - Install dependencies
+
+# Copy app source code
+COPY package.json ./
+
+RUN npm install
+
+COPY . .
+
+#Expose port and start the application
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
